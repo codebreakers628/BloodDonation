@@ -1,0 +1,32 @@
+body{
+
+    margin: 0;
+    padding: 0;
+
+}
+#mainSlide{
+
+    width: 100%;
+    height: 100vh;
+    background: url(../img/sl6.jpg) no-repeat fixed top center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+
+
+    /*    background:transparent url(images/abtusback.jpg) no-repeat fixed top center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;*/
+}
+#mainSlide div{
+
+    width: 100%;
+    height: 100vh;
+    //background: rgba(0,0,0,0.3);
+
+}
