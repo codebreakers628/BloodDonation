@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 3, 2015 11:26:44 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="blood" name="com.blood.javainstitute.db.Slider" optimistic-lock="version" table="slider">
+    <id name="idslider" type="java.lang.Integer">
+      <column name="idslider"/>
+      <generator class="identity"/>
+    </id>
+    <property name="imgPath" type="binary">
+      <column name="img_path" read="AES_DECRYPT(ALLOWANCE_TYPE, '12345code')" write="AES_ENCRYPT(?, '12345code')"/>
+    </property>
+  </class>
+</hibernate-mapping>

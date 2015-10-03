@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 3, 2015 11:26:44 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="blood" name="com.blood.javainstitute.db.Donor" optimistic-lock="version" table="donor">
+    <id name="iddonor" type="java.lang.Integer">
+      <column name="iddonor"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one class="com.blood.javainstitute.db.BloodGroup" fetch="select" name="bloodGroup">
+      <column name="blood_group_idblood_group" not-null="true"/>
+    </many-to-one>
+    <property name="batchjsad" type="java.lang.Integer">
+      <column name="batchjsad"/>
+    </property>
+    <property name="nic" type="binary">
+      <column name="nic" read="AES_DECRYPT(ALLOWANCE_TYPE, '12345code')" write="AES_ENCRYPT(?, '12345code')"/>
+    </property>
+    <property name="bday" type="date">
+      <column length="10" name="bday"/>
+    </property>
+    <property name="email" type="binary">
+      <column name="email" read="AES_DECRYPT(ALLOWANCE_TYPE, '12345code')" write="AES_ENCRYPT(?, '12345code')"/>
+    </property>
+    <property name="tel" type="binary">
+      <column name="tel" read="AES_DECRYPT(ALLOWANCE_TYPE, '12345code')" write="AES_ENCRYPT(?, '12345code')"/>
+    </property>
+    <property name="tel2" type="binary">
+      <column name="tel2" read="AES_DECRYPT(ALLOWANCE_TYPE, '12345code')" write="AES_ENCRYPT(?, '12345code')"/>
+    </property>
+    <property name="path" type="binary">
+      <column name="path" read="AES_DECRYPT(ALLOWANCE_TYPE, '12345code')" write="AES_ENCRYPT(?, '12345code')"/>
+    </property>
+    <property name="graduateYear" type="java.lang.Integer">
+      <column name="graduate_year"/>
+    </property>
+  </class>
+</hibernate-mapping>

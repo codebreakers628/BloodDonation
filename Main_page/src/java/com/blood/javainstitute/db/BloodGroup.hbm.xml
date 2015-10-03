@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 3, 2015 11:26:44 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="blood" name="com.blood.javainstitute.db.BloodGroup" optimistic-lock="version" table="blood_group">
+    <id name="idbloodGroup" type="java.lang.Integer">
+      <column name="idblood_group"/>
+      <generator class="identity"/>
+    </id>
+    <property name="groupName" type="binary">
+      <column name="group_name" read="AES_DECRYPT(ALLOWANCE_TYPE, '12345code')" write="AES_ENCRYPT(?, '12345code')"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="donors" table="donor">
+      <key>
+        <column name="blood_group_idblood_group" not-null="true"/>
+      </key>
+      <one-to-many class="com.blood.javainstitute.db.Donor"/>
+    </set>
+  </class>
+</hibernate-mapping>
