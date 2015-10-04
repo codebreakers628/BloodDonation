@@ -8,6 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -67,9 +68,9 @@
                 <h1 class="wow zoomIn" data-wow-delay="1s">Blood Donation Campaign 2k15</h1>
 
                 <h4>REGISTER FOR DONORS</h4>
-                
+                <form action="C_Register" method="POST">
                 <input type="submit" value="REGISTER" id="RegisterButton"/>
-                
+                </form >
                 
                 <div align="center" id="logos">
                     <img src="img/pcjt.jpg" width="50" height="50"/>

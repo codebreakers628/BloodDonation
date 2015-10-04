@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <servlet>
+        <servlet-name>register</servlet-name>
+        <jsp-file>/WEB-INF/register.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>C_Register</servlet-name>
+        <servlet-class>com.blood.javainstitute.controller.C_Register</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>register</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>C_Register</servlet-name>
+        <url-pattern>/C_Register</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
